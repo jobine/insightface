@@ -21,8 +21,8 @@ rec.prepare(0)
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    parser.add_argument('img1', type=str)
-    parser.add_argument('img2', type=str)
+    parser.add_argument('--img1', type=str)
+    parser.add_argument('--img2', type=str)
     return parser.parse_args()
 
 
@@ -47,7 +47,6 @@ def func(args):
     else:
         conclu = 'They ARE the same person'
     return sim, conclu
-
 
 
 if __name__ == '__main__':
