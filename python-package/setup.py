@@ -6,7 +6,7 @@ import numpy
 import re
 import shutil
 import sys
-from setuptools import setup, find_packages
+from setuptools import setup, find_namespace_packages
 from distutils.core import Extension
 from Cython.Distutils import build_ext
 from Cython.Build import cythonize
@@ -85,7 +85,7 @@ setup(
     long_description_content_type='text/markdown',
     license='MIT',
     # Package info
-    packages=find_packages(exclude=('docs', 'tests', 'scripts')),
+    packages=find_namespace_packages(exclude=('docs', 'tests', 'scripts')),
     data_files=data_files,
     zip_safe=True,
     include_package_data=True,
